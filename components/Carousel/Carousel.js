@@ -49,18 +49,23 @@ function createCarousel() {
   pic[2].src = "./assets/carousel/trees.jpeg";
   pic[3].src = "./assets/carousel/turntable.jpeg";
   
-  pic[0].style.display = 'block';
-
   let picNum = 0;
+  pic[0].style.display = 'block';
+  
+  
   right.addEventListener('click', (event) => {
-   pic[picNum].style.display = 'none';
+   pic[picNum].style.display = 'none'
+   
+  //  pic[picNum].style.display = 'none';
    if(picNum >= pic.length - 1){
      picNum = 0;
    }
    else {
     picNum++;
    }
+   
    pic[picNum].style.display = 'block';
+   
   } )
 
   left.addEventListener('click', (event) => {
